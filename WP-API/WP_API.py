@@ -52,7 +52,7 @@ def get_all_customers(access_token):
     if response.status_code == 200:
         customers = response.json().get("items")
         for customer in customers:
-            print(f"Customer ID: {customer.get('id')}| Name: {customer.get('first_name')} {customer.get('last_name')}| Email: {customer.get('email')}")
+            print(f"Customer ID: {customer.get('id')}| Name: {customer.get('first_name')} {customer.get('last_name')}| Email: {customer.get('email')}.")
     else:
         print(f"Error fetching customers. Status code: {response.status_code}")
         print(response.json())
